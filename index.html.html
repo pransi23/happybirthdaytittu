@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌸 Unlock My Love 🌸</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ff99cc, #ffcccc);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .auth-container {
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      color: #fff;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      font-size: 1rem;
+      width: 80%;
+      border: none;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff66a3;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+
+    .error {
+      color: #fff;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .forgot {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: white;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .hint {
+      color: #fff;
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container">
+    <h2>🌸 Hi Tittu! Enter the secret password 🌸</h2>
+    <input type="password" id="password" placeholder="Your secret code 💗" />
+    <br />
+    <button onclick="checkPassword()">Unlock 🎁</button>
+
+    <div id="error" class="error"></div>
+    <div class="forgot" onclick="showHint()">Forgot Password?</div>
+    <div id="hint" class="hint"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      const correctPassword = "0219"; // 🔐 Change this if needed
+
+      if (password === correctPassword) {
+        window.location.href = "birthday.html"; // ✅ Redirect
+      } else {
+        document.getElementById("error").innerText = "Oops! Wrong password.";
+      }
+    }
+
+    function showHint() {
+      document.getElementById("hint").innerText = "Hint: The day we became one ❤️ (MMDD)";
+    }
+  </script>
+
+</body>
+</html>

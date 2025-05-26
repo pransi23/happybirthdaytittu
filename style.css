@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#ffdde1, #ee9ca7);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-top: 5%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  animation: pop 1s ease;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+button, .button {
+  background-color: #fff;
+  color: #ee6aa7;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover, .button:hover {
+  background-color: #fcd2e2;
+}
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.imgur.com/GH6vZks.png') repeat;
+  opacity: 0.1;
+  z-index: -1;
+  animation: float 30s linear infinite;
+}
+
+@keyframes float {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+@keyframes pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.4);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.countdown {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
